@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EMtechs | Contato</title>
+
+    <link rel="icon" type="image/png" href="img/LOGO_EMTECHS_OFICIAL.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="pagina-contato">
+
+    <header class="cabecalho">
+
+        <div class="container-menu">
+
+            <a href="index.html" class="logo">
+                <img src="img/LOGO_EMTECHS_OFICIAL.png" alt="Logo EMtechs">
+            </a>
+                 <nav class="menu">
+                <a href="index.html" >INÍCIO</a>
+                <a href="sobre.html">SOBRE</a>
+                <a href="servicos.html">SERVIÇOS</a>
+                <a href="projetos.html">PROJETOS</a>
+                <a href="contato.html" class="ativo">CONTATO</a>
+                <a href="avisos.html">AVISOS</a>
+                <a href="parceiros.html">PARCEIROS SOCIAIS</a>
+            </nav>
+           
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="cabecalho-pagina">
+
+            <h1>
+                CONTATO
+            </h1>
+
+        </section>
+
+
+        <section class="contato-container">
+
+            <div class="formulario-contato">
+
+                <h2>
+                    Formulário de Contato
+                </h2>
+
+                <form id="formulario-email-emtechs" action="https://formsubmit.co/ana.sophia@academico.ifpb.edu.br" method="POST">
+                    <input type="hidden" name="_subject" value="Nova mensagem do site EMtechs">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <label>Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                    <label>E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                    <label>Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+
+                    <button type="submit">
+                        Enviar mensagem
+                    </button>
+                    <p id="aviso-email-emtechs" class="aviso-envio-email" role="status">Após clicar, conclua a verificação de segurança, se solicitada. O destinatário precisa ativar o formulário pelo e-mail de confirmação na primeira utilização.</p>
+                </form>
+
+            </div>
+
+
+            <div class="informacoes-contato">
+
+                <h2>
+                    INFORMAÇÕES
+                </h2>
+
+                <h3>
+                    Endereço:
+                </h3>
+
+                <p>
+                    Avenida Professora Dorinha Eugênio, S/N,
+                    bairro Cidade Universitária,
+                    Santa Luzia - PB,
+                    CEP: 58600-000
+                </p>
+
+                <h3>
+                    Telefone:
+                </h3>
+
+                <p>
+                    (83) 9999-0000
+                </p>
+
+                <h3>
+                    E-mail:
+                </h3>
+
+                <p>
+                    campus.sl@ifpb.edu.br.
+                </p>
+
+                 <div class="redes-sociais">
+            <a href="mailto:ana.sophia@academico.ifpb.edu.br"> <img src="img/4.png" alt="E-mail"></a>
+            <a href="https://www.instagram.com/ifspb_santaluzia/"><img src="img/5.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/ifpbsantaluzia/?locale=pt_BR"><img src="img/6.png" alt="Facebook"></a>
+        </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+  <footer class="rodape">
+
+        <p>
+            2026 - IFPB Campus Santa Luzia
+        </p>
+
+    </footer>
+    
+    <!-- Envio via formulário HTML; não depende de aplicativo de e-mail. -->
+     <script>
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const nome = document.querySelector("#nome").value;
+    const email = document.querySelector("#email").value;
+    const mensagem = document.querySelector("#mensagem").value;
+
+    const destinatario = "ana.sophia@academico.ifpb.edu.br";
+    const assunto = "Mensagem enviada pelo site EMtechs";
+
+    const corpo =
+        "Nome: " + nome + "\n" +
+        "E-mail: " + email + "\n\n" +
+        "Mensagem:\n" + mensagem;
+
+    const url = "https://mail.google.com/mail/?view=cm&fs=1" +
+        "&to=" + encodeURIComponent(destinatario) +
+        "&su=" + encodeURIComponent(assunto) +
+        "&body=" + encodeURIComponent(corpo);
+
+    window.location.href = url;
+});
+</script>
+</body>
+</html>
